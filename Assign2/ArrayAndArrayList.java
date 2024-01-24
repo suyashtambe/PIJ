@@ -1,5 +1,5 @@
 // ArrayAndArrayList.java
-package Assign1;
+package Assign2;
 
 import java.io.IOException;
 import java.util.*;

@@ -1,34 +1,53 @@
-// UserInput.java
 package Assign1;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class UserInput {
-    // Method to get an array input from the user
-    public static double[] inputArray(int size) throws IOException {
-        // Create a BufferedReader to read user input
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    // Scanner object for reading input
+    private Scanner scanner;
 
-        // Prompt the user to enter the array elements
-        System.out.println("Enter the array elements separated by spaces: ");
+    // Constructor initializes the Scanner
+    public UserInput() {
+        scanner = new Scanner(System.in);
+    }
 
-        // Read the array input as a string
-        String array = br.readLine();
+    // Method to get a double input from the user with a prompt message
+    public double getDoubleInput(String message) {
+        System.out.println(message);
+        return scanner.nextDouble();
+    }
 
-        // Initialize an array to store the input elements
-        double[] arrayInput = new double[size];
+    // Method to get a string input from the user with a prompt message
+    public String getStringInput(String message) {
+        System.out.println(message);
+        return scanner.nextLine();
+    }
 
-        // Split the input string and convert each element to double
-        String[] input = array.trim().split("\\s+");
+    // Method to get an array input from the user with a prompt message
+    public double[] getArrayInput() {
+        Scanner sc = new Scanner(System.in); 
 
-        // Populate the array with the converted elements
-        for (int i = 0; i < size; i++) {
-            arrayInput[i] = Double.parseDouble(input[i]);
+        // Prompt user for the size of the array
+        System.out.println("Enter the size of the array:");
+        int size = sc.nextInt();
+        
+        // Create an array to store the input elements
+        double[] array = new double[size];
+        
+        // Prompt user to enter each element of the array
+        System.out.println("Enter elements:");
+        for (int i = 0; i < size; i++) { 
+            // Check if the next input is a double
+            if (sc.hasNextDouble()) { 
+                array[i] = sc.nextDouble(); 
+            } 
         }
+        sc.close(); // Close the inner scanner
+        return array;
+    }
 
-        // Return the array containing user-input elements
-        return arrayInput;
+    // Method to close the Scanner when it is no longer needed
+    public void closeScanner() {
+        scanner.close();
     }
 }
