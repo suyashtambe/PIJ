@@ -1,6 +1,6 @@
-package Assign 7;
+package Assign7;
 
-public class Customexception {
+public class Customexception extends Exception {
    
         public Customexception(){
             super("exception has occurred");
