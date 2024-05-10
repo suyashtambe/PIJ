@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment8and10.LogInController">
+   <children>
+      <AnchorPane prefHeight="402.0" prefWidth="149.0" style="-fx-background-color: #4287f5;" />
+      <AnchorPane layoutX="149.0" prefHeight="77.0" prefWidth="454.0" style="-fx-background-color: #4287f5;" />
+      <TextField fx:id="textField_employee_id" layoutX="322.0" layoutY="99.0" promptText="1234" text="2231" />
+      <TextField fx:id="textField_name" layoutX="322.0" layoutY="141.0" promptText="Raj" text="Manan Tandel" />
+      <TextField fx:id="textField_age" layoutX="322.0" layoutY="187.0" promptText="18" text="20" />
+      <TextField fx:id="textField_email" layoutX="322.0" layoutY="233.0" promptText="abc.xqc@gmail.com" text="manan@gmail.com" />
+      <TextField fx:id="textField_dept" layoutX="322.0" layoutY="275.0" promptText="IT" text="SRE" />
+      <Label fx:id="label_id" layoutX="190.0" layoutY="99.0" prefHeight="25.0" prefWidth="107.0" text="Employee ID :" />
+      <Label fx:id="label_age" layoutX="190.0" layoutY="187.0" prefHeight="25.0" prefWidth="107.0" text="Employee Age :" />
+      <Label fx:id="label_name" layoutX="190.0" layoutY="141.0" prefHeight="25.0" prefWidth="107.0" text="Employee Name :" />
+      <Label fx:id="label_email" layoutX="190.0" layoutY="233.0" prefHeight="25.0" prefWidth="107.0" text="Employee Email :" />
+      <Label fx:id="label_dept" layoutX="190.0" layoutY="275.0" prefHeight="25.0" prefWidth="132.0" text="Employee Department :" />
+      <Button fx:id="register" layoutX="355.0" layoutY="319.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="83.0" style="-fx-background-color: #4287f5;" text="Register" textFill="WHITE" />
+      <Label fx:id="welcomeText" layoutX="11.0" layoutY="21.0" prefHeight="49.0" prefWidth="531.0" text="Employee Registration System" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="notif" layoutX="190.0" layoutY="70.0" prefHeight="25.0" prefWidth="355.0" />
+   </children>
+</AnchorPane>
